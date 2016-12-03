@@ -53,9 +53,11 @@
               <div class="col-sm-5">
                 <select class="form-control" name="title_font_color">
                   <option value="">==请选择颜色==</option>
+                    <foreach name="titleFontColor" item="color">
+                      <option value="{$key}">{$color}</option>
+                    </foreach>
                     
-                      <option value=""></option>
-                    
+
                 </select>
               </div>
             </div>
@@ -64,7 +66,9 @@
               <div class="col-sm-5">
                 <select class="form-control" name="catid">
 
-                    <option value=""></option>
+                  <foreach name="webSiteMenu" item="sitenav">
+                    <option value="{$sitenav.menu_id}">{$sitenav.name}</option>
+                  </foreach>
                 </select>
               </div>
             </div>
@@ -74,7 +78,9 @@
               <div class="col-sm-5">
                 <select class="form-control" name="copyfrom">
 
-                    <option value=""></option>
+                  <foreach name="copyFrom" item="cfrom">
+                    <option value="{$key}">{$cfrom}</option>
+                  </foreach>
                 </select>
               </div>
             </div>
